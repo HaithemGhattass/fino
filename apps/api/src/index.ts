@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { requireAuth } from "../middleware/auth";
+import { requireAuth } from "./middleware/auth";
 
 const app = express();
 
