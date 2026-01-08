@@ -1,0 +1,16 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  background: var(--color-surface);
+  border-right: 1px solid #1f2430;
+  padding: 16px;
+}
+
+.main {
+  overflow: hidden;
+  position: relative;
+}
