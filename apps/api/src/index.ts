@@ -1,19 +1,19 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import { requireAuth } from "./middleware/auth";
-
+import projectRoutes from "./routes/projects";
+import baseRoutes from "./routes/base";
+import PageRoutes from "./routes/pages";
+import annotationRoutes from "./routes/annotations";
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.get("/health", (_, res) => {
-  res.json({ status: "ok" });
-});
-
-app.get("/me", requireAuth, (req, res) => {
-  res.json({ user: (req as any).user });
-});
+app.use("/projects", projectRoutes);
+app.use("/", baseRoutes);
+app.use("/pages", PageRoutes);
+app.use("/annotations", annotationRoutes);
 
 
 app.listen(4000, () => {
