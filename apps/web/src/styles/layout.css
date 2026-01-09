@@ -14,3 +14,57 @@
   overflow: hidden;
   position: relative;
 }
+
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  cursor: crosshair;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.page-canvas {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.iframe-wrapper,
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  cursor: crosshair;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
